@@ -1,0 +1,1369 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+}
+
+*::selection {
+    background-color: #2596be;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #f97316;
+    box-shadow: -4px 2px 22px #babcbd;
+    width: 0;
+    height: 0;
+    font-size: 23px;
+    position: fixed;
+    z-index: 9999;
+    bottom: 50px;
+    right: 50px;
+    transition-duration: 1s;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.to-top:hover i {
+    animation-name: changeTranslate;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes changeTranslate {
+    0% {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+    }
+}
+
+.icon-hide {
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.icon-show {
+    opacity: 1;
+}
+
+.active {
+    width: 60px;
+    height: 60px;
+}
+
+/* Header Section */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    max-width: 100%;
+    max-height: 100px;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 38px;
+    margin: 10px 0 10px 50px;
+    color: black;
+}
+
+/* personal Section */
+
+
+.personal-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+.personal-info .nagdy {
+    min-width: 400px;
+    max-height: 400px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    transition-duration: 1s;
+}
+
+.personal-info .nagdy:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.);
+    -moz-transform: scale(1.);
+    -ms-transform: scale(1.);
+    -o-transform: scale(1.);
+    box-shadow: -4px 5px 63px #ff6915;
+}
+
+.info-text .hello {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    color: #555555;
+}
+
+.hello span {
+    position: relative;
+    color: transparent;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+.hello span::before {
+    content: "Developer";
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    color: #f97316;
+    animation-name: set-width;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes set-width {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.info-text .name {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.info-text .job-disc {
+    text-align: center;
+    font-size: 27px;
+    color: #555555;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.info-text .download-cv {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+    max-width: 170px;
+    margin: 10px auto;
+}
+
+.personal-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 60%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.personal-links i {
+    font-size: 30px;
+    color: black;
+    opacity: 0.8;
+    transition-duration: 0.5s;
+}
+
+.personal-links i:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+/* .personal-links .linkedin {
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+    transition-duration: 0.5s;
+}
+
+.linkedin:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.personal-links .github {
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+    transition-duration: 0.5s;
+}
+
+.github:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.personal-links .facebook {
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+    transition-duration: 0.5s;
+}
+
+.facebook:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.personal-links .instagram {
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+    transition-duration: 0.5s;
+}
+
+.instagram:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.personal-links .whatsapp {
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+    transition-duration: 0.5s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+} */
+
+.about {
+    margin: 140px 0;
+}
+
+.about .about-head {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .know {
+    color: #555555;
+    font-size: 16px;
+}
+
+.about h2 {
+    font-size: 48px;
+    text-transform: capitalize;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.about .about-total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 100%;
+    text-align: center;
+}
+
+.about-total .intro {
+    position: relative;
+    width: 40%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -4px 2px 22px #babcbd;
+    transition-duration: 1s;
+}
+
+.about-total .intro::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #f97316;
+
+    transition-duration: 1s;
+}
+
+.about-total .intro:hover:before {
+    width: 200px;
+}
+
+.about-total .intro:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.intro h3 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 9px;
+}
+
+.intro p {
+    color: #737677;
+}
+
+.frontend-skills {
+    width: 17%;
+}
+
+.frontend-skills h3 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 34px;
+}
+
+.frontend-skills .skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.frontend-skills .skills p {
+    color: white;
+    margin-right: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.skills .upper {
+    text-transform: uppercase;
+}
+
+.skills .cap {
+    text-transform: capitalize;
+}
+
+.embedded-skills {
+    width: 17%;
+}
+
+.embedded-skills h3 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 34px;
+}
+
+.embedded-skills .skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.embedded-skills .skills p {
+    text-transform: capitalize;
+    color: white;
+    margin-right: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.embedded-skills .skills p span {
+    text-transform: uppercase;
+}
+
+.education {
+    text-align: center;
+    margin-bottom: 170px;
+}
+
+.education .edu-p {
+    color: #555555;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.education h2 {
+    font-size: 48px;
+    text-transform: capitalize;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.edu-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.faculty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    padding: 20px;
+    box-shadow: -4px 2px 22px #babcbd;
+}
+
+.faculty img {
+    width: 30px;
+    height: 30px;
+}
+
+.faculty .undergrad {
+    color: #555555;
+    font-size: 17px;
+    text-transform: capitalize;
+    margin: 3px 0 3px 0;
+    font-weight: 600;
+}
+
+.faculty .engineering {
+    color: #555555;
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.vacances {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.ieee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 45%;
+    padding: 20px;
+    margin-top: 40px;
+    transition-duration: 1s;
+}
+
+.ieee .ras-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition-duration: 0.2s;
+}
+
+.ieee .member {
+    color: #555555;
+    font-size: 17px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 11px;
+    transition-duration: 0.5s;
+}
+
+.ieee .ieee-zsb {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition-duration: 0.5s;
+}
+
+.ieee .track {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition-duration: 0.5s;
+}
+
+.ieee:hover {
+    background-color: orange;
+}
+
+.ieee:hover .ras-img {
+    border: 4px solid white;
+}
+
+.ieee:hover .member {
+    color: #fff;
+}
+
+.ieee:hover .ieee-zsb {
+    color: white;
+}
+
+.ieee:hover .track {
+    color: white;
+}
+
+.gdsc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 45%;
+    padding: 20px;
+    margin-top: 40px;
+    margin-right: 0;
+    transition-duration: 1s;
+}
+
+
+.gdsc .gdsc-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition-duration: 0.2s;
+}
+
+.gdsc .member {
+    color: #555555;
+    font-size: 17px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 11px;
+    transition-duration: 0.5s;
+}
+
+.gdsc .gdsc-azhar {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition-duration: 0.5s;
+}
+
+.gdsc-azhar span {
+    text-transform: capitalize;
+}
+
+.gdsc .track {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition-duration: 0.5s;
+}
+
+.gdsc:hover {
+    background-color: rgb(34 197 94 / var(--tw-border-opacity));
+}
+
+.gdsc:hover .gdsc-img {
+    border: 4px solid #ffffff73;
+}
+
+.gdsc:hover .member {
+    color: #fff;
+}
+
+.gdsc:hover .gdsc-azhar {
+    color: white;
+}
+
+.gdsc:hover .track {
+    color: white;
+}
+
+
+
+
+
+
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.projects .browse {
+    color: #555555;
+    font-size: 16px;
+}
+
+.projects h2 {
+    font-size: 48px;
+    text-transform: capitalize;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 28%;
+    box-shadow: -4px 2px 22px #babcbd;
+    padding: 15px;
+    transition-duration: 1s;
+    margin-bottom: 50px;
+}
+
+.project:hover {
+    box-shadow: -4px 2px 22px #f97316;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.image {
+    margin-bottom: 66px;
+    height: 170px;
+    width: 100%;
+}
+
+.project-p {
+    color: #555555;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.project-h {
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 23px;
+    margin: 8px 0 43px;
+}
+
+.project-h span {
+    text-transform: uppercase;
+}
+
+.projects-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.projects-links .linkedin-projects {
+    width: 30px;
+    height: 30px;
+    margin: 0 11px 0 -2px;
+    transition-duration: 1s;
+}
+
+.projects-links .linkedin-projects:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.projects-links .github-projects {
+    width: 30px;
+    height: 30px;
+    transition-duration: 1s;
+}
+
+
+.projects-links .github-projects:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+
+.all-projects {
+    text-transform: capitalize;
+    background-color: #f97316;
+    color: white;
+    padding: 15px 20px;
+    font-weight: 500;
+    font-size: 17px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.all-projects:hover {
+    border: 1px solid #f97316;
+    background-color: white;
+    color: #f97316;
+    transform: translateY(-10px) scale(1.1);
+    -webkit-transform: translateY(-10px) scale(1.1);
+    -moz-transform: translateY(-10px) scale(1.1);
+    -ms-transform: translateY(-10px) scale(1.1);
+    -o-transform: translateY(-10px) scale(1.1);
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.contact .contact-p {
+    color: #555555;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.contact .contact-h {
+    font-size: 48px;
+    text-transform: capitalize;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+
+.contact-links {
+    width: fit-content;
+    height: fit-content;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.gmail-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-links .gmail-group .gmail-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+.gmail-group .mail-text {
+    font-size: 20px;
+    position: relative;
+    color: black;
+    transition-duration: 1s;
+}
+
+.gmail-group .mail-text::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #84888a;
+    transition-duration: 1s;
+}
+
+.gmail-group .mail-text:hover {
+    color: #84888a;
+}
+
+.gmail-group .mail-text:hover::before {
+    width: 100%;
+}
+
+.linkedin-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-links .linkedin-group .linkedin-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 25px;
+}
+
+
+.linkedin-group .linkedin-text {
+    font-size: 20px;
+    position: relative;
+    color: black;
+    transition-duration: 1s;
+    text-transform: capitalize;
+}
+
+.linkedin-group .linkedin-text::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #84888a;
+    transition-duration: 1s;
+}
+
+.linkedin-group .linkedin-text:hover {
+    color: #84888a;
+}
+
+.linkedin-group .linkedin-text:hover::before {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    height: 82px;
+    padding: 15px;
+}
+
+footer p {
+    color: #555555;
+    font-size: 16px;
+}
+
+
+/*******************************************************/
+
+@media (max-width: 400px) {
+    .personal-info {
+        flex-direction: column;
+    }
+
+    .personal-info .nagdy {
+        min-width: 200px;
+        max-height: 200px;
+        margin-left: 22px;
+        margin-top: 34px;
+    }
+
+    .personal-info .nagdy:hover {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        box-shadow: none;
+    }
+
+    .info-text .hello {
+        font-size: 17px;
+    }
+
+    .info-text .name {
+        font-size: 32px;
+    }
+
+    .info-text .job-disc {
+        font-size: 20px;
+    }
+
+    .info-text .download-cv {
+
+        font-size: 17px;
+        max-width: 151px;
+    }
+
+    .personal-info {
+        flex-direction: column;
+    }
+
+    .info-text .hello {
+        font-size: 17px;
+    }
+
+    .info-text .name {
+        font-size: 32px;
+    }
+
+    .info-text .job-disc {
+        font-size: 20px;
+    }
+
+    .info-text .download-cv {
+
+        font-size: 17px;
+        max-width: 151px;
+    }
+
+    .info-text .name {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .personal-links .linkedin {
+        width: 30px;
+        height: 30px;
+        margin-left: auto;
+
+    }
+
+    .personal-links .github {
+        width: 30px;
+        height: 30px;
+        margin-left: auto;
+
+    }
+
+    .about h2 {
+        font-size: 38px;
+    }
+
+    .about .about-total {
+        flex-direction: column;
+    }
+
+    .about-total {
+        flex-direction: column;
+    }
+
+    .about-total .intro:hover {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    .embedded-skills h3 {
+        margin-top: 50px;
+    }
+
+    .education h2 {
+        font-size: 38px;
+    }
+
+    .faculty {
+        width: 98%;
+    }
+
+    .vacances {
+        flex-direction: column;
+        width: 98%;
+    }
+
+    .ieee {
+        width: 100%;
+    }
+
+    .gdsc {
+        width: 100%;
+    }
+
+    .projects h2 {
+        font-size: 38px;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 95%;
+        margin-left: 7px;
+    }
+
+    .project:hover {
+        box-shadow: -4px 2px 22px #babcbd;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    .contact .contact-h {
+        font-size: 38px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .linkedin-group {
+        margin-top: 23px;
+    }
+
+    .contact-links .linkedin-group .linkedin-img {
+        margin-left: 0;
+    }
+
+}
+
+/*************************************************************/
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .personal-info {
+        flex-direction: column;
+    }
+
+
+    .personal-info .nagdy {
+        min-width: 200px;
+        max-height: 200px;
+        margin-left: 22px;
+        margin-top: 34px;
+    }
+
+    .personal-info .nagdy:hover {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        box-shadow: none;
+    }
+
+    .info-text .name {
+        font-size: 37px;
+    }
+
+    .info-text .job-disc {
+        font-size: 23px;
+    }
+
+    .info-text .download-cv {
+        font-size: 17px;
+        max-width: 159px;
+    }
+
+    .personal-links .linkedin {
+        margin-left: auto;
+    }
+
+    .about h2 {
+        font-size: 38px;
+    }
+
+    .about .about-total {
+        flex-direction: column;
+    }
+
+    .about-total .intro {
+        width: 98%;
+        margin: 0 auto 30px auto;
+    }
+
+    .about-total .intro:hover {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    .frontend-skills {
+        width: 60%;
+        margin-left: 29px;
+    }
+
+    .embedded-skills {
+        width: 82%;
+        margin-left: 29px;
+    }
+
+    .embedded-skills h3 {
+        margin-top: 50px;
+    }
+
+    .faculty {
+        width: 98%;
+    }
+
+    .vacances {
+        flex-direction: column;
+        width: 98%;
+    }
+
+    .ieee {
+        width: 100%;
+    }
+
+    .gdsc {
+        width: 100%;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    .project:hover {
+        box-shadow: -4px 2px 22px #babcbd;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    .contact .contact-h {
+        font-size: 38px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .linkedin-group {
+        margin-top: 23px;
+    }
+
+    .contact-links .linkedin-group .linkedin-img {
+        margin-left: 0;
+    }
+
+}
+
+/*************************************************************/
+
+@media (min-width: 600px) and (max-width: 800px) {
+    .personal-info {
+        flex-direction: column;
+    }
+
+    .personal-info .nagdy {
+        min-width: 200px;
+        max-height: 200px;
+        margin-left: 22px;
+        margin-top: 34px;
+    }
+
+    .personal-info .nagdy:hover {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        box-shadow: none;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    .info-text .hello {
+        font-size: 26px;
+    }
+
+    .info-text .name {
+        font-size: 39px;
+    }
+
+    .info-text .job-disc {
+        font-size: 26px;
+    }
+
+    .info-text .download-cv {
+        font-size: 20px;
+        max-width: 188px;
+        padding: 12px 10px;
+        margin: 2px auto;
+    }
+
+    .personal-links .linkedin {
+        width: 36px;
+        height: 36px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .personal-links .github {
+        width: 36px;
+        height: 36px;
+    }
+
+    .about .know {
+        font-size: 20px;
+    }
+
+    .about h2 {
+        font-size: 38px;
+    }
+
+    .about .about-total {
+        flex-direction: column;
+    }
+
+    .about-total .intro {
+        width: 98%;
+        margin: 0 auto 30px auto;
+    }
+
+    .about-total .intro:hover {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    .frontend-skills {
+        width: 60%;
+        margin-left: 29px;
+    }
+
+    .embedded-skills {
+        width: 57%;
+        margin-left: 29px;
+    }
+
+    .embedded-skills h3 {
+        margin-top: 50px;
+    }
+
+    .faculty {
+        width: 98%;
+    }
+
+    .vacances {
+        flex-direction: column;
+        width: 98%;
+    }
+
+    .ieee {
+        width: 100%;
+    }
+
+    .gdsc {
+        width: 100%;
+    }
+
+    .project {
+        width: 46%;
+    }
+
+    .project:hover {
+        box-shadow: -4px 2px 22px #babcbd;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    .contact .contact-h {
+        font-size: 38px;
+    }
+
+}
+
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .embedded-skills {
+        width: 23%;
+        margin-left: 29px;
+    }
+
+    .about-total .intro:hover {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    .project {
+        width: 46%;
+    }
+
+    .project:hover {
+        box-shadow: -4px 2px 22px #babcbd;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+}

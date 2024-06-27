@@ -1,0 +1,6 @@
+{
+    "auto-reload.interval": 200,
+    "files.autoSave": "off",
+    "html.format.indentInnerHtml": false,
+    "html.trace.server": "off"
+}
